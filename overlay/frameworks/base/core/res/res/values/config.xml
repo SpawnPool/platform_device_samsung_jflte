@@ -240,4 +240,7 @@
     <!-- Enable CellBroadcastReceiver package in Settings menu -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
+    <!-- Torch config -->
+    <bool name="config_enableTorch">true</bool>
+
 </resources>
