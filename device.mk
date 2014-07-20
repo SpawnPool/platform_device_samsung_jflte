@@ -44,10 +44,10 @@ PRODUCT_COPY_FILES += \
 
 # loki
 PRODUCT_PACKAGES += \
-    loki_patch \
-    loki_flash \
+    loki_tool \
     loki.sh \
-    loki_bootloaders
+    loki_bootloaders \
+    recovery-transform.sh
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -124,7 +124,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:/system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:/system/etc/permissions/android.hardware.sensor.stepdetector.xml
 
-
 # Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
@@ -179,9 +178,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.data_netmgrd_nint=16 \
     lpa.decode=true \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
-    ril.subscription.types=NV,RUIM \
-    ro.cdma.subscribe_on_ruim_ready=true \
-    persist.radio.no_wait_for_card=0 \
     keyguard.no_require_sim=true \
     media.aac_51_output_enabled=true \
     mm.enable.smoothstreaming=true \
